@@ -16,8 +16,10 @@ const colorClassMap: Record<string, string> = {
   descriptor: 'aac-card-descriptor',
   preposition: 'aac-card-preposition',
   question: 'aac-card-question',
+  negation: 'aac-card-negation',
   feeling: 'aac-card-feeling',
   social: 'aac-card-social',
+  misc: 'aac-card-misc',
 };
 
 export default function SymbolCard({ symbol, language, colorCodingEnabled, onClick }: SymbolCardProps) {
