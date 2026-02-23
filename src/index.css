@@ -36,15 +36,17 @@
 
     --radius: 0.75rem;
 
-    /* AAC Color Coding */
-    --aac-core: 48 100% 50%;
-    --aac-noun: 225 73% 57%;
-    --aac-verb: 120 61% 50%;
-    --aac-descriptor: 260 54% 68%;
-    --aac-preposition: 33 100% 50%;
-    --aac-question: 25 76% 31%;
-    --aac-feeling: 0 100% 71%;
-    --aac-social: 220 15% 87%;
+    /* Modified Fitzgerald Key - Avaz/Proloquo2Go style */
+    --aac-core: 48 96% 53%;
+    --aac-noun: 30 100% 55%;
+    --aac-verb: 142 71% 45%;
+    --aac-descriptor: 210 100% 56%;
+    --aac-preposition: 330 80% 65%;
+    --aac-question: 270 60% 55%;
+    --aac-negation: 0 80% 50%;
+    --aac-feeling: 330 80% 65%;
+    --aac-social: 330 80% 65%;
+    --aac-misc: 220 10% 82%;
 
     /* Functional colors */
     --success: 142 71% 45%;
@@ -82,34 +84,42 @@
 
   .aac-card-core {
     border-color: hsl(var(--aac-core));
-    background: hsl(var(--aac-core) / 0.08);
+    background: hsl(var(--aac-core) / 0.12);
   }
   .aac-card-noun {
     border-color: hsl(var(--aac-noun));
-    background: hsl(var(--aac-noun) / 0.08);
+    background: hsl(var(--aac-noun) / 0.12);
   }
   .aac-card-verb {
     border-color: hsl(var(--aac-verb));
-    background: hsl(var(--aac-verb) / 0.08);
+    background: hsl(var(--aac-verb) / 0.12);
   }
   .aac-card-descriptor {
     border-color: hsl(var(--aac-descriptor));
-    background: hsl(var(--aac-descriptor) / 0.08);
+    background: hsl(var(--aac-descriptor) / 0.12);
   }
   .aac-card-preposition {
     border-color: hsl(var(--aac-preposition));
-    background: hsl(var(--aac-preposition) / 0.08);
+    background: hsl(var(--aac-preposition) / 0.12);
   }
   .aac-card-question {
     border-color: hsl(var(--aac-question));
-    background: hsl(var(--aac-question) / 0.08);
+    background: hsl(var(--aac-question) / 0.12);
+  }
+  .aac-card-negation {
+    border-color: hsl(var(--aac-negation));
+    background: hsl(var(--aac-negation) / 0.12);
   }
   .aac-card-feeling {
     border-color: hsl(var(--aac-feeling));
-    background: hsl(var(--aac-feeling) / 0.08);
+    background: hsl(var(--aac-feeling) / 0.12);
   }
   .aac-card-social {
     border-color: hsl(var(--aac-social));
-    background: hsl(var(--aac-social) / 0.15);
+    background: hsl(var(--aac-social) / 0.12);
+  }
+  .aac-card-misc {
+    border-color: hsl(var(--aac-misc));
+    background: hsl(var(--aac-misc) / 0.15);
   }
 }

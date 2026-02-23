@@ -1,4 +1,4 @@
-export type WordType = 'core' | 'noun' | 'verb' | 'descriptor' | 'preposition' | 'question' | 'feeling' | 'social';
+export type WordType = 'core' | 'noun' | 'verb' | 'descriptor' | 'preposition' | 'question' | 'negation' | 'feeling' | 'social' | 'misc';
 
 export interface AACSymbol {
   emoji: string;
@@ -20,8 +20,10 @@ export const wordColorMap: Record<string, string> = {
   descriptor: 'descriptor',
   preposition: 'preposition',
   question: 'question',
+  negation: 'negation',
   feeling: 'feeling',
   social: 'social',
+  misc: 'misc',
 };
 
 export const quickPhrases = {
@@ -89,10 +91,10 @@ export const symbols: Record<string, AACSymbol[]> = {
     { emoji: '❤️', en: 'Want', hi: 'चाहना', core: true, wordType: 'verb' },
     { emoji: '🆘', en: 'Need', hi: 'ज़रूरत', core: true, wordType: 'verb' },
     { emoji: '👍', en: 'Like', hi: 'पसंद', core: true, wordType: 'verb' },
-    { emoji: '❌', en: "Don't", hi: 'नहीं', core: true, wordType: 'core' },
+    { emoji: '❌', en: "Don't", hi: 'नहीं', core: true, wordType: 'negation' },
     { emoji: '✅', en: 'Do', hi: 'करना', core: true, wordType: 'verb' },
     { emoji: '▶️', en: 'Go', hi: 'जाओ', core: true, wordType: 'verb' },
-    { emoji: '🛑', en: 'Stop', hi: 'रुको', core: true, wordType: 'verb' },
+    { emoji: '🛑', en: 'Stop', hi: 'रुको', core: true, wordType: 'negation' },
     { emoji: '👀', en: 'See', hi: 'देखो', core: true, wordType: 'verb' },
     { emoji: '👂', en: 'Hear', hi: 'सुनो', core: true, wordType: 'verb' },
     { emoji: '🗣️', en: 'Say', hi: 'कहो', core: true, wordType: 'verb' },
@@ -130,16 +132,18 @@ export const symbols: Record<string, AACSymbol[]> = {
     { emoji: '🧐', en: 'How', hi: 'कैसे', core: true, wordType: 'question' },
     { emoji: '⚖️', en: 'Which', hi: 'कौन सा', core: true, wordType: 'question' },
     { emoji: '✅', en: 'Yes', hi: 'हाँ', core: true, wordType: 'social' },
-    { emoji: '❌', en: 'No', hi: 'नहीं', core: true, wordType: 'social' },
+    { emoji: '❌', en: 'No', hi: 'नहीं', core: true, wordType: 'negation' },
     { emoji: '👍', en: 'Okay', hi: 'ठीक है', core: true, wordType: 'social' },
     { emoji: '🙏', en: 'Please', hi: 'कृपया', core: true, wordType: 'social' },
     { emoji: '🙏', en: 'Thank You', hi: 'धन्यवाद', core: true, wordType: 'social' },
-    { emoji: '⏰', en: 'Now', hi: 'अभी', core: true, wordType: 'core' },
-    { emoji: '⏱️', en: 'Later', hi: 'बाद में', core: true, wordType: 'core' },
-    { emoji: '📅', en: 'Today', hi: 'आज', core: true, wordType: 'core' },
-    { emoji: '📆', en: 'Tomorrow', hi: 'कल', core: true, wordType: 'core' },
-    { emoji: '📍', en: 'Here', hi: 'यहाँ', core: true, wordType: 'core' },
-    { emoji: '📌', en: 'There', hi: 'वहाँ', core: true, wordType: 'core' },
+    { emoji: '🚫', en: 'Not', hi: 'नहीं', core: true, wordType: 'negation' },
+    { emoji: '⛔', en: 'Danger', hi: 'खतरा', core: true, wordType: 'negation' },
+    { emoji: '⏰', en: 'Now', hi: 'अभी', core: true, wordType: 'misc' },
+    { emoji: '⏱️', en: 'Later', hi: 'बाद में', core: true, wordType: 'misc' },
+    { emoji: '📅', en: 'Today', hi: 'आज', core: true, wordType: 'misc' },
+    { emoji: '📆', en: 'Tomorrow', hi: 'कल', core: true, wordType: 'misc' },
+    { emoji: '📍', en: 'Here', hi: 'यहाँ', core: true, wordType: 'misc' },
+    { emoji: '📌', en: 'There', hi: 'वहाँ', core: true, wordType: 'misc' },
     { emoji: '🏠', en: 'Home', hi: 'घर', core: true, wordType: 'noun' },
     { emoji: '🏫', en: 'School', hi: 'स्कूल', core: true, wordType: 'noun' },
     { emoji: '⬆️', en: 'Up', hi: 'ऊपर', core: true, wordType: 'preposition' },
@@ -151,6 +155,8 @@ export const symbols: Record<string, AACSymbol[]> = {
     { emoji: '➡️', en: 'To', hi: 'को', core: true, wordType: 'preposition' },
     { emoji: '👉', en: 'For', hi: 'के लिए', core: true, wordType: 'preposition' },
     { emoji: '↔️', en: 'With', hi: 'के साथ', core: true, wordType: 'preposition' },
+    { emoji: '👋', en: 'Hi', hi: 'नमस्ते', core: true, wordType: 'social' },
+    { emoji: '👋', en: 'Bye', hi: 'अलविदा', core: true, wordType: 'social' },
     { emoji: '😊', en: 'Happy', hi: 'खुश', core: true, wordType: 'feeling' },
     { emoji: '😢', en: 'Sad', hi: 'उदास', core: true, wordType: 'feeling' },
     { emoji: '😠', en: 'Angry', hi: 'गुस्सा', core: true, wordType: 'feeling' },

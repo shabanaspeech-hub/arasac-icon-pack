@@ -69,8 +69,10 @@ export default {
           descriptor: "hsl(var(--aac-descriptor))",
           preposition: "hsl(var(--aac-preposition))",
           question: "hsl(var(--aac-question))",
+          negation: "hsl(var(--aac-negation))",
           feeling: "hsl(var(--aac-feeling))",
           social: "hsl(var(--aac-social))",
+          misc: "hsl(var(--aac-misc))",
         },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
